@@ -1,0 +1,158 @@
+// ============================================================
+// LEAD HUNTER — LEADS DATABASE
+// ============================================================
+// Update this file with fresh leads. Each lead needs:
+//   - id (unique number)
+//   - company, role, location, url, stage, about
+//   - hiringManager { name, title, linkedin }
+//   - postedDays, salary, tags[], source
+// ============================================================
+
+const LEADS = [
+  {
+    id: 1,
+    company: "Rollstack",
+    role: "Product Marketing Manager",
+    location: "New York, NY (Remote OK)",
+    url: "https://www.ycombinator.com/companies/rollstack-2/jobs/ooSATfR-product-marketing-manager",
+    stage: "Seed → Series A",
+    about: "YC-backed (W23) reports automation platform used by SoFi, Zillow, and Whirlpool. Automates slide decks and documents from BI tools — solving the last mile of the modern data stack. Backed by Insight Partners. Cash-flow positive and category-defining.",
+    hiringManager: {
+      name: "Jad Esber",
+      title: "CEO & Co-Founder",
+      linkedin: "https://linkedin.com/in/jadesber",
+    },
+    postedDays: 6,
+    salary: "Competitive + meaningful equity",
+    tags: ["YC W23", "B2B SaaS", "Data/BI", "Remote"],
+    source: "Y Combinator",
+  },
+  {
+    id: 2,
+    company: "Embeddables",
+    role: "Founding Product Marketer",
+    location: "San Francisco, CA (Hybrid)",
+    url: "https://www.ycombinator.com/companies/embeddables/jobs/SjwWev8-founding-product-marketer",
+    stage: "Seed (Series A traction)",
+    about: "YC-backed (S18) low-code AI funnel builder for D2C health & wellness brands. Powers interactive marketing funnels for BlueChew, Seed, and Grindr. Profitable, dominant in category, and pioneering 'self-improving funnels' with AI agents that run experiments autonomously.",
+    hiringManager: {
+      name: "Matthew Morley",
+      title: "CEO & Co-Founder",
+      linkedin: "https://linkedin.com/in/matt-morley",
+    },
+    postedDays: 13,
+    salary: "Competitive + life-changing equity",
+    tags: ["YC S18", "D2C", "AI/ML", "Health & Wellness"],
+    source: "Y Combinator",
+  },
+  {
+    id: 3,
+    company: "Arcade",
+    role: "Head of Product Marketing",
+    location: "San Francisco, CA (Hybrid)",
+    url: "https://jobs.ashbyhq.com/arcade/ff17f4d8-1593-4c1e-b2f4-5a151170cea1",
+    stage: "Series A",
+    about: "Interactive demo platform used by 20,000+ teams to create dynamic product stories. Built by ex-Atlassians, AngelList, and Shopify team. Owns end-to-end campaigns, pricing & packaging, and GTM execution for a fast-growing PLG motion in the demo/sales enablement space.",
+    hiringManager: {
+      name: "Kyle Bastien",
+      title: "CEO & Co-Founder",
+      linkedin: "https://linkedin.com/in/kylebastien",
+    },
+    postedDays: 5,
+    salary: "$160K–$200K + equity",
+    tags: ["PLG", "Sales Enablement", "MarTech", "Series A"],
+    source: "MKT1 Job Board",
+  },
+  {
+    id: 4,
+    company: "EvolutionIQ",
+    role: "Sr. Product Marketing Manager",
+    location: "New York, NY (Hybrid/Remote)",
+    url: "https://job-boards.greenhouse.io/evolutioniq/jobs/5841822004",
+    stage: "Series B+",
+    about: "AI platform transforming insurance claims handling — used by national carriers in the $1.3T annual claims industry. Founded by ex-Googler, backed by First Round Capital and FirstMark. Named Inc.'s Best Workplaces 3 years running. Nearly 200 employees and scaling fast.",
+    hiringManager: {
+      name: "Tomas Vykruta",
+      title: "CEO & Co-Founder",
+      linkedin: "https://linkedin.com/in/tomasvykruta",
+    },
+    postedDays: 3,
+    salary: "$150K–$190K + equity",
+    tags: ["AI/ML", "InsurTech", "Enterprise", "Series B"],
+    source: "Greenhouse",
+  },
+  {
+    id: 5,
+    company: "Zensors",
+    role: "Product Marketing Lead",
+    location: "Pittsburgh, PA / Remote (US)",
+    url: "https://www.ycombinator.com/companies/zensors-inc/jobs/9WxsbSF-product-marketing-lead",
+    stage: "Seed",
+    about: "YC-backed (S21) AI computer vision platform that understands and automates the physical world. Uses deep learning for 24/7 data collection and analysis across retail, airports, and smart cities. First product marketing hire — massive opportunity to shape the GTM from scratch.",
+    hiringManager: {
+      name: "Anuraag Jain",
+      title: "CEO & Co-Founder",
+      linkedin: "https://linkedin.com/in/anuraagjain",
+    },
+    postedDays: 18,
+    salary: "Competitive + founding equity",
+    tags: ["YC S21", "Computer Vision", "AI", "First PMM Hire"],
+    source: "Y Combinator",
+  },
+  {
+    id: 6,
+    company: "Findigs",
+    role: "Lead Product Marketing Manager",
+    location: "New York, NY (Hybrid)",
+    url: "https://www.builtinnyc.com/jobs/marketing/search/product-marketing-manager",
+    stage: "Series B",
+    about: "Rental screening and decisioning platform making renting fairer and more convenient. All-in-one ecosystem that establishes trust between property managers and residents. Rapidly growing PropTech startup with strong product-led approach and enterprise traction across the US.",
+    hiringManager: {
+      name: "Tyler Wanlass",
+      title: "CEO & Founder",
+      linkedin: "https://linkedin.com/in/tylerwanlass",
+    },
+    postedDays: 7,
+    salary: "$160K–$195K + equity",
+    tags: ["PropTech", "B2B SaaS", "Series B", "NYC"],
+    source: "Built In NYC",
+  },
+  {
+    id: 7,
+    company: "Blacksmith",
+    role: "Head of Marketing (PMM-heavy)",
+    location: "San Francisco, CA",
+    url: "https://www.builtinsf.com/jobs/marketing/search/head-of-marketing",
+    stage: "Series A",
+    about: "Cloud infrastructure startup building the fastest CI runners. Developer-focused GTM with strong technical audience. The Head of Marketing role owns product marketing, growth strategy, brand, and events — ideal for a PMM leader ready to run the full function at an early-stage infra company.",
+    hiringManager: {
+      name: "Phillip Thomas",
+      title: "CEO & Co-Founder",
+      linkedin: "https://linkedin.com/in/phillipithomas",
+    },
+    postedDays: 4,
+    salary: "$170K–$210K + equity",
+    tags: ["DevTools", "Cloud Infra", "Series A", "Technical"],
+    source: "Built In SF",
+  },
+  {
+    id: 8,
+    company: "GovWell",
+    role: "Product Marketing Manager",
+    location: "New York, NY (Hybrid)",
+    url: "https://startup.jobs/locations/new-york/product-marketing-manager",
+    stage: "Seed",
+    about: "GovTech startup modernizing local government permitting and licensing. Helping municipalities digitize processes that affect millions of residents. Early-stage with strong mission alignment and a clear B2G sales motion that needs product marketing to accelerate growth.",
+    hiringManager: {
+      name: "Founding Team",
+      title: "CEO",
+      linkedin: "https://linkedin.com/company/govwell",
+    },
+    postedDays: 10,
+    salary: "Competitive seed-stage + equity",
+    tags: ["GovTech", "B2G", "Seed", "NYC"],
+    source: "Startup.jobs",
+  },
+];
+
+export default LEADS;
